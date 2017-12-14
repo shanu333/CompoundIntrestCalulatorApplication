@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.luffy.intrestcalculator.MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableRow>
+            <TextView
+                android:text="Enter amount "
+                android:textSize="15sp"/>
+            <EditText
+                android:layout_marginLeft="10sp"
+                android:id="@+id/amount"
+                android:inputType="number"
+                android:hint="Enter amount "
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Enter rate of intrest "
+                android:textSize="15sp"/>
+            <EditText
+                android:layout_marginLeft="10sp"
+                android:id="@+id/rate"
+                android:text="1.75"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Enter compound interval"
+                android:textSize="15sp"/>
+            <EditText
+                android:layout_marginLeft="10sp"
+                android:id="@+id/ci"
+                android:text="18"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Enter start date"
+                android:textSize="15sp"/>
+            <EditText
+                android:layout_marginLeft="10sp"
+                android:id="@+id/start_date"
+                android:inputType="date"
+                android:hint="Enter start date"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Enter end date"
+                android:textSize="15sp"/>
+            <EditText
+                android:layout_marginLeft="10sp"
+                android:id="@+id/end_date"
+                android:inputType="date"
+                android:hint="Enter end date"
+                />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/calculate"
+                android:text="Calclualte"/>
+            <TextView
+                android:layout_marginLeft="10sp"
+                android:id="@+id/result"
+                android:text="Result "/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
