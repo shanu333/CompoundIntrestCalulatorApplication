@@ -1,6 +1,7 @@
 package com.example.luffy.intrestcalculator;
 
 import android.util.Log;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -70,6 +71,7 @@ public class SimpleIntrestCalculator {
         double tDays = calclulateDiffInDays(startDate, endDate);
         si = si + calcSimpleIntrest(p,r,tDays); // first calc for months
         Log.d("haha", " month diff = " + tMonths + " day diff = " + tDays);
+        MainActivity.displayToast(" month diff = " + tMonths + " day diff = " + tDays);
         return si;
     }
 }

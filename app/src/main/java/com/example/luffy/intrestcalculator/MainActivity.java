@@ -1,11 +1,13 @@
 package com.example.luffy.intrestcalculator;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.sql.Time;
 import java.text.SimpleDateFormat;
@@ -13,11 +15,12 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
+    static Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        context = getApplicationContext(); // bad practice
         final TextView amountTv = (TextView)findViewById(R.id.amount);
         final TextView rateTv = (TextView)findViewById(R.id.rate);
         final TextView ciTv = (TextView)findViewById(R.id.ci);
@@ -47,5 +50,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+    }
+
+    public static  void displayToast(String string)
+    {
+        Toast.makeText(context, string, Toast.LENGTH_LONG).show();
     }
 }
