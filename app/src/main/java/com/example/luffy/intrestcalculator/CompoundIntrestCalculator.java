@@ -58,9 +58,9 @@ public class CompoundIntrestCalculator {
                 newEndDate.setMonth(ci + newEndDate.getMonth());
                 Log.d("haha", " next p = " + p);
             }
-            Log.d("haha", "for start =  " + df.format(newStartDate) + " , " + df.format(newEndDate));
+            Log.d("haha", "for start =  " +  p + "  " + df.format(newStartDate) + " , " + df.format(endDate));
             p = p + SimpleIntrestCalculator.calcluateSimpleIntrest(p, r, newStartDate, endDate);
-            Log.d("haha", " next p = " + p);
+            Log.d("haha", " ans = " + p);
         } catch (ParseException ex) {
             Logger.getLogger(CompoundIntrestCalculator.class.getName()).log(Level.SEVERE, null, ex);
         }

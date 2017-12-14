@@ -1,5 +1,7 @@
 package com.example.luffy.intrestcalculator;
 
+import android.util.Log;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -66,8 +68,8 @@ public class SimpleIntrestCalculator {
         double tMonths = calclulateDiffInMonths(startDate, endDate);
         double si = calcSimpleIntrest(p,r,tMonths); // first calc for months
         double tDays = calclulateDiffInDays(startDate, endDate);
-        si = si + calcSimpleIntrest(p,r,tMonths); // first calc for months
-        System.out.println(si);
+        si = si + calcSimpleIntrest(p,r,tDays); // first calc for months
+        Log.d("haha", " month diff = " + tMonths + " day diff = " + tDays);
         return si;
     }
 }
